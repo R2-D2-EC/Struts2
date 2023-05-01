@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+
+        <action name="login">
+            <result>/WEB-INF/content/login.jsp</result>
+        </action>
+        
+        <action name="validateUser" class="beans.actions.LoginAction">
+            <result name="success">/WEB-INF/content/welcome.jsp</result>
+            <result name="input" type="redirectAction">login</result>
+        </action>
+        
+    </package>
+</struts>
