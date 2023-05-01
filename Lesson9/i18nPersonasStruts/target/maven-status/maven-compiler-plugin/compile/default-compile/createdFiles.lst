@@ -1,0 +1,3 @@
+beans\model\Persona.class
+beans\model\Domicilio.class
+beans\actions\PersonasAction.class
