@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation/DTD Tiles Configuration 3.0//EN"
+    "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!--Definicion de nuestra plantilla, dandole un nombre e indicando donde se encontrara-->
+    <definition name="layout" template="/WEB-INF/content/layout.jsp">
+        <!--Partes de nuestra plantilla-->
+        <put-attribute name="title" value="Plantilla"/>
+        <put-attribute name="header" value="/WEB-INF/content/header.jsp"/>
+        <put-attribute name="menu" value="/WEB-INF/content/menu.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/content/body.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/content/footer.jsp"/>
+    </definition>
+    
+    <!-- Definicion de otra pagina, que hereda de nuestra plantilla-->
+    <definition name="bienvenidoTile" extends="layout">
+        <!--Redefinimos solo lo que nos interesa, en este caso el titulo y el body -->
+        <put-attribute name="title" value="Bienvenido"/>
+        <put-attribute name="body" value="/WEB-INF/content/bienvenido.jsp"/>
+    </definition>
+    
+    <!-- Definicion de otra pagina, que hereda tambien de nuestra plantilla-->
+    <definition name="personasTile" extends="layout">
+        <put-attribute name="title" value="Personas"/>
+        <put-attribute name="body" value="/WEB-INF/content/personas.jsp"/>
+    </definition>
+    
+</tiles-definitions>
+        
